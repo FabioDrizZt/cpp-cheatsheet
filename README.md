@@ -1,14 +1,15 @@
-
 # 📓 C++ Cheatsheet
 
 ## Índice
 1. [Sintaxis Básica](#sintaxis-básica)
-2. [Estructuras de Control](#estructuras-de-control)
-3. [Funciones](#funciones)
-4. [Clases y Objetos](#clases-y-objetos)
-5. [Manejo de Memoria](#manejo-de-memoria)
-6. [STL (Standard Template Library)](#stl-standard-template-library)
-7. [Ejemplos Comunes](#ejemplos-comunes)
+2. [Tipos de Datos](#tipos-de-datos)
+3. [Operadores](#operadores)
+4. [Estructuras de Control](#estructuras-de-control)
+5. [Funciones](#funciones)
+6. [Clases y Objetos](#clases-y-objetos)
+7. [Manejo de Memoria](#manejo-de-memoria)
+8. [STL (Standard Template Library)](#stl-standard-template-library)
+9. [Ejemplos Comunes](#ejemplos-comunes)
 
 ## Sintaxis Básica
 
@@ -22,9 +23,60 @@ int main() {
 }
 ```
 
+## Tipos de Datos
+
+### Tipos de Datos Básicos
+
+```cpp
+int entero = 5;          // Entero
+float flotante = 5.5f;   // Flotante
+double doble = 5.5;      // Doble precisión
+char caracter = 'A';     // Caracter
+bool booleano = true;    // Booleano
+```
+
+### Tipos de Datos Derivados
+
+```cpp
+int arreglo[5] = {1, 2, 3, 4, 5};  // Arreglo
+string cadena = "Hola";            // Cadena de caracteres
+```
+
+## Operadores
+
+### Operadores Aritméticos
+
+```cpp
+int suma = 5 + 3;
+int resta = 5 - 3;
+int multiplicacion = 5 * 3;
+int division = 5 / 3;
+int modulo = 5 % 3;
+```
+
+### Operadores Relacionales
+
+```cpp
+bool esIgual = (5 == 3);      // Igual a
+bool esDiferente = (5 != 3);  // Diferente de
+bool esMayor = (5 > 3);       // Mayor que
+bool esMenor = (5 < 3);       // Menor que
+bool esMayorIgual = (5 >= 3); // Mayor o igual que
+bool esMenorIgual = (5 <= 3); // Menor o igual que
+```
+
+### Operadores Lógicos
+
+```cpp
+bool y = (true && false); // AND lógico
+bool o = (true || false); // OR lógico
+bool no = !true;          // NOT lógico
+```
+
 ## Estructuras de Control
 
 ### If-Else
+
 ```cpp
 int a = 5;
 if (a > 3) {
@@ -35,6 +87,7 @@ if (a > 3) {
 ```
 
 ### Switch
+
 ```cpp
 int x = 2;
 switch (x) {
@@ -50,6 +103,7 @@ switch (x) {
 ```
 
 ### For Loop
+
 ```cpp
 for (int i = 0; i < 5; i++) {
     cout << i << endl;
@@ -57,6 +111,7 @@ for (int i = 0; i < 5; i++) {
 ```
 
 ### While Loop
+
 ```cpp
 int i = 0;
 while (i < 5) {
@@ -66,6 +121,7 @@ while (i < 5) {
 ```
 
 ### Do-While Loop
+
 ```cpp
 int i = 0;
 do {
@@ -77,6 +133,7 @@ do {
 ## Funciones
 
 ### Declaración y Definición
+
 ```cpp
 int suma(int a, int b) {
     return a + b;
@@ -90,6 +147,7 @@ int main() {
 ```
 
 ### Funciones con Referencias
+
 ```cpp
 void incrementar(int &num) {
     num++;
@@ -103,9 +161,22 @@ int main() {
 }
 ```
 
+### Funciones Comunes
+
+```cpp
+#include <cmath>
+
+double raizCuadrada = sqrt(16);  // Raíz cuadrada
+double potencia = pow(2, 3);     // Potencia
+double seno = sin(3.14 / 2);     // Seno
+double coseno = cos(3.14 / 2);   // Coseno
+double logaritmo = log(10);      // Logaritmo natural
+```
+
 ## Clases y Objetos
 
 ### Definición de Clase
+
 ```cpp
 class Persona {
 public:
@@ -127,6 +198,7 @@ int main() {
 ```
 
 ### Constructores y Destructores
+
 ```cpp
 class Persona {
 public:
@@ -153,6 +225,7 @@ int main() {
 ## Manejo de Memoria
 
 ### Punteros
+
 ```cpp
 int main() {
     int a = 10;
@@ -163,6 +236,7 @@ int main() {
 ```
 
 ### Memoria Dinámica
+
 ```cpp
 int main() {
     int *p = new int;
@@ -176,6 +250,7 @@ int main() {
 ## STL (Standard Template Library)
 
 ### Vectores
+
 ```cpp
 #include <vector>
 
@@ -189,6 +264,7 @@ int main() {
 ```
 
 ### Mapas
+
 ```cpp
 #include <map>
 
@@ -207,6 +283,7 @@ int main() {
 ## Ejemplos Comunes
 
 ### FizzBuzz
+
 ```cpp
 int main() {
     for (int i = 1; i <= 100; i++) {
@@ -225,6 +302,7 @@ int main() {
 ```
 
 ### Número Primo
+
 ```cpp
 bool esPrimo(int n) {
     if (n <= 1) return false;
